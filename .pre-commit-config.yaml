@@ -34,7 +34,7 @@ repos:
 
       - id: cppcheck
         name: cppcheck
-        entry: "cppcheck --std=c++17 arx/"
+        entry: "cppcheck --std=c++17 arrow-cpp/"
         language: system
         pass_filenames: false
         stages:
@@ -46,7 +46,7 @@ repos:
         entry: cmake-format
         language: system
         exclude: ^$
-        files: (\.cmake|CMakeLists.txt)(.in)?$
+        files: (arrow-cpp/\.cmake|arrow-cpp/CMakeLists.txt|arrow-c/\.cmake|arrow-c/CMakeLists.txt)(.in)?$
         pass_filenames: true
         stages:
           - commit

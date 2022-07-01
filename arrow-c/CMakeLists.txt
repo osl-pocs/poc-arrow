@@ -6,8 +6,7 @@ set(PROJECT_NAME poc_arrow_c)
 set(PROJECT_PATH ${CMAKE_CURRENT_SOURCE_DIR})
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_PATH}/build/bin)
 
-project(${PROJECT_NAME}
-  LANGUAGES C)
+project(${PROJECT_NAME} LANGUAGES C)
 
 find_package(Arrow REQUIRED)
 
