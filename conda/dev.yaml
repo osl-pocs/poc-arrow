@@ -1,0 +1,21 @@
+name: poc-arrow
+channels:
+- nodefaults
+- conda-forge
+dependencies:
+# build
+- compilers
+- compiler-rt
+- clangdev 13.*
+- clangxx 13.*
+- cmake
+- llvmdev 13.*
+- lld 13.*
+- ninja
+# run
+- arrow-cpp 8.*
+- arrow-c-glib 8.*
+- cli11
+- glog
+# dev
+- pre-commit
