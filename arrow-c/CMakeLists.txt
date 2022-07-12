@@ -17,7 +17,8 @@ if(${Arrow_FOUND})
   message(STATUS "Arrow Version: ${ARROW_VERSION}")
 endif()
 
-include_directories(${GLIB_INCLUDE_DIRS})
+include_directories(${GLIB_INCLUDE_DIRS} ${PROJECT_PATH}/src)
 
-add_executable(${PROJECT_NAME} src/pocarrow.c)
+add_executable(${PROJECT_NAME} src/main.c src/utils.c src/examples_values.c
+                               src/examples_scalars.c)
 target_link_libraries(${PROJECT_NAME} PRIVATE arrow_shared ${GLIB_LIBRARIES})
