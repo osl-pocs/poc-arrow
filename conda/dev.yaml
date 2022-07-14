@@ -11,7 +11,9 @@ dependencies:
 - cmake
 - llvmdev 13.*
 - lld 13.*
+- meson
 - ninja
+- pkg-config
 # run
 - arrow-cpp 8.*
 - arrow-c-glib 8.*

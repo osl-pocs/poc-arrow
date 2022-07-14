@@ -19,6 +19,6 @@ endif()
 
 include_directories(${GLIB_INCLUDE_DIRS} ${PROJECT_PATH}/src)
 
-add_executable(${PROJECT_NAME} src/main.c src/utils.c src/examples_values.c
-                               src/examples_scalars.c)
+add_executable(${PROJECT_NAME} src/main.c src/utils.c src/examples-values.c
+                               src/examples-scalars.c src/examples-arrays.c)
 target_link_libraries(${PROJECT_NAME} PRIVATE arrow_shared ${GLIB_LIBRARIES})
