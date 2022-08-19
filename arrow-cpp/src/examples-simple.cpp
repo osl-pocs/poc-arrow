@@ -14,11 +14,13 @@
 #include <iostream>                     // for operator<<, endl, basic_ostream
 #include <memory>                       // for __shared_ptr_access, shared_ptr
 
+#include "utils.h"
+
 using arrow::Status;
 
 namespace {
 
-Status RunMain(int argc, char** argv) {
+Status RunMain() {
   const char* csv_filename = "test.csv";
   const char* arrow_filename = "test.arrow";
 
@@ -54,8 +56,10 @@ Status RunMain(int argc, char** argv) {
 
 }  // namespace
 
-int main(int argc, char** argv) {
-  Status st = RunMain(argc, argv);
+int example_simple() {
+  print_header((char*)"SIMPLE-EXAMPLE");
+
+  Status st = RunMain();
   if (!st.ok()) {
     std::cerr << st << std::endl;
     return 1;
