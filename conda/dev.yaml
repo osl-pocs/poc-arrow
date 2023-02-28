@@ -15,8 +15,8 @@ dependencies:
 - ninja
 - pkg-config
 # run
-- arrow-cpp 9.*
-- arrow-c-glib 9.*
+- arrow-cpp 10.*
+- arrow-c-glib 10.*
 - cli11
 - glog
 # dev
