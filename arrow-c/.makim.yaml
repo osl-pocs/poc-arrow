@@ -1,0 +1,31 @@
+version: "1.0.0"
+groups:
+  - name: default
+    targets:
+      clean:
+        help: remove the build folder
+        run: rm -rf build/*
+
+      run:
+        help: run the project executable
+        run:
+          ./build/bin/poc_arrow_c
+
+      build:
+        help: build the project
+        args:
+          build-type:
+            help: specify the build type
+            type: string
+            default: release
+        dependencies:
+          - target: clean
+        run: |
+          mkdir -p build
+          meson setup \
+            --prefix $CONDA_PREFIX \
+            --libdir $CONDA_PREFIX/lib \
+            --includedir ./src \
+            --buildtype={{ args.build_type }} \
+            build .
+          meson compile -C build

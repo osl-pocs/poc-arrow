@@ -23,3 +23,6 @@ dependencies:
 - pre-commit
 - cmake-format
 - cppcheck
+- pip
+- pip:
+  - makim
