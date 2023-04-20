@@ -10,7 +10,7 @@ clean:
 .ONESHELL:
 .PHONY: run
 run:
-	./build/bin/poc_arrow_c
+	./build/arrowc
 
 
 .ONESHELL:

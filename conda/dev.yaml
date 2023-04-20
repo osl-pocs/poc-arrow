@@ -6,11 +6,11 @@ dependencies:
 # build
 - compilers
 - compiler-rt
-- clangdev 13.*
-- clangxx 13.*
+- clangdev
+- clangxx
 - cmake
-- llvmdev 13.*
-- lld 13.*
+- llvmdev
+- lld
 - meson
 - ninja
 - pkg-config
@@ -20,9 +20,13 @@ dependencies:
 - cli11
 - glog
 # dev
+- nodejs
 - pre-commit
 - cmake-format
 - cppcheck
+- jupyterlab
+- xeus-cling
 - pip
 - pip:
   - makim
+  - jupyter-c-kernel

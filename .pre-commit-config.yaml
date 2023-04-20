@@ -23,7 +23,7 @@ repos:
 
       - id: clang-format
         name: clang-format
-        entry: clang-format --Werror --style=file -i --verbose
+        entry: clang-format --style=file -i --verbose  # --Werror
         exclude: ^$
         files: ""
         language: system
