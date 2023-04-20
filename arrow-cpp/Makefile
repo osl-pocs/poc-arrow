@@ -1,9 +1,17 @@
-.PHONY: build
+BUILD_TYPE:=release
 
 .ONESHELL:
-build:
+.PHONY: clean
+clean:
 	rm -rf build/*
-	mkdir -p build
-	cd build
-	cmake ..
-	cmake --build .
+
+.ONESHELL:
+.PHONY: build
+build: clean
+	meson setup \
+		--prefix ${CONDA_PREFIX} \
+		--libdir ${CONDA_PREFIX}/lib \
+		--includedir ./src \
+		--buildtype=${BUILD_TYPE} \
+		build .
+	meson compile -C build

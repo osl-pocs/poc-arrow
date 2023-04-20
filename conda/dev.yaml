@@ -6,20 +6,27 @@ dependencies:
 # build
 - compilers
 - compiler-rt
-- clangdev 13.*
-- clangxx 13.*
+- clangdev
+- clangxx
 - cmake
-- llvmdev 13.*
-- lld 13.*
+- llvmdev
+- lld
 - meson
 - ninja
 - pkg-config
 # run
-- arrow-cpp 8.*
-- arrow-c-glib 8.*
+- arrow-cpp 10.*
+- arrow-c-glib 10.*
 - cli11
 - glog
 # dev
+- nodejs
 - pre-commit
 - cmake-format
 - cppcheck
+- jupyterlab
+- xeus-cling
+- pip
+- pip:
+  - makim
+  - jupyter-c-kernel

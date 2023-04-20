@@ -46,7 +46,7 @@ jobs:
     - name: build poc-arrow-c
       run: |
         cd arrow-c
-        make meson-build
+        make build
 
     - name: lint
       run: |
